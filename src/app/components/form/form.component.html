@@ -1,0 +1,59 @@
+<form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="nombredejugador">Nombre de Jugador:</label>
+        <input matInput name="nombredejugador" required formControlName="nombredejugador">
+        <div
+            *ngIf="playerForm.controls.nombredejugador.invalid && (playerForm.controls.nombredejugador.dirty || playerForm.controls.nombredejugador.touched)">
+            <div *ngIf="playerForm.controls.nombredejugador.errors?.['required']">Jugador necesario</div>
+            <div *ngIf="playerForm.controls.nombredejugador.errors?.['pattern']">No pueden haber numeros en este campo</div>
+        </div>
+    </div>
+
+    <div>
+        <label for="nacionalidad">Nacionalidad:</label>
+        <input id="nacionalidad" type="text" formControlName="nacionalidad">
+        <div *ngIf="nacionalidadExists">This nacionalidad is used</div>
+        <div
+            *ngIf="playerForm.controls.nacionalidad.invalid && (playerForm.controls.nacionalidad.dirty || playerForm.controls.nacionalidad.touched)">
+            <div *ngIf="playerForm.controls.nacionalidad.errors?.['maxlength']">Maximo 50 letras</div>
+            <div *ngIf="playerForm.controls.nacionalidad.errors?.['required']">Nacionalidad es requerida</div>
+        </div>
+    </div>
+
+    <div>
+        <label for="numerodejugador">Numero de Jugador:</label>
+        <input type="number" id="numerodejugador" name="numerodejugador" required min="0" formControlName="numerodejugador">
+        <div
+            *ngIf="playerForm.controls.numerodejugador.invalid && (playerForm.controls.numerodejugador.dirty || playerForm.controls.numerodejugador.touched)">
+            <div *ngIf="playerForm.controls.numerodejugador.errors?.['required']">Numero de jugador es requerido</div>
+            <div *ngIf="playerForm.controls.numerodejugador.errors?.['min']">Numero de jugador no puede ser negativo</div>
+            <div *ngIf="playerForm.controls.numerodejugador.errors?.['max']">Maximo 99 numeros</div>
+
+        </div>
+    </div>
+
+    <div>
+        <label for="piernabuena">Pierna buena:</label>
+        <select formControlName="piernabuena">
+            <option *ngFor="let piernabuena of categories" [value]="piernabuena">{{ piernabuena }}</option>
+        </select>
+        <div
+            *ngIf="playerForm.controls.piernabuena.invalid && (playerForm.controls.piernabuena.dirty || playerForm.controls.piernabuena.touched)">
+            <div *ngIf="playerForm.controls.piernabuena.errors?.['required']">Pierna buena es requerido</div>
+        </div>
+    </div>
+
+    <div>
+        <label for="jugadorlibre">Jugador libre:</label>
+        <input id="jugadorlibre" type="checkbox" formControlName="jugadorlibre">
+    </div>
+
+    <div>
+        <label for="imagen">Imagen:</label>
+        <input id="imagen" type="text" formControlName="imagen">
+    </div>
+    <div *ngIf="nameExists || nacionalidadExists" class="error-message">
+        Error: El nombre o la descripción ya existen.
+    </div>
+    <button type="submit" [disabled]="playerForm.invalid">Enviar</button>
+</form>

@@ -1,0 +1,56 @@
+/* Estilos del contenido principal */
+.main-content {
+  padding: 20px; /* Espacio interno */
+}
+
+/* Estilos de la sección de héroe */
+.hero-section {
+  position: relative;
+  background-color: #e63946; /* Rojo coral */
+  padding: 60px 20px; /* Espacio interno */
+  text-align: center; /* Alineación centrada */
+  color: #fff; /* Color del texto blanco */
+}
+
+.hero-title {
+  font-size: 36px; /* Tamaño del título */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+.hero-description {
+  font-size: 18px; /* Tamaño de la descripción */
+}
+
+/* Estilos de las últimas noticias */
+.latest-news {
+  margin-top: 40px; /* Espacio superior */
+}
+
+.news-list {
+  list-style-type: none; /* Eliminar los puntos de la lista */
+  padding: 0; /* Eliminar el espacio interno predeterminado */
+  margin: 0; /* Eliminar el margen exterior predeterminado */
+}
+
+.news-list li {
+  margin-bottom: 10px; /* Espacio inferior entre elementos */
+}
+
+.news-list li a {
+  color: #333; /* Color del texto oscuro */
+  text-decoration: none; /* Eliminar subrayado del enlace */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+.news-list li a:hover {
+  color: #e63946; /* Cambia el color a rojo coral al pasar el ratón */
+}
+
+/* Estilos de la imagen del héroe */
+.hero-image {
+  width: 450px; /* Cambia el ancho de la imagen */
+  margin-left: 38%;
+  border: 5px solid #3498db; /* Añade un borde sólido de 5px de grosor y color azul */
+  border-radius: 15px; /* Añade esquinas redondeadas */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+}

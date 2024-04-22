@@ -1,0 +1,27 @@
+footer {
+    background-color: rgba(19, 72, 218, 1);
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-top: 1px solid #ffffff;
+    color: #a50044;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    color:#a50044;
+    font-weight: 700;
+    text-decoration: none;
+}

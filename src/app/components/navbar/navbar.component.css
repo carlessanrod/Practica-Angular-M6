@@ -1,0 +1,32 @@
+.navbar {
+  background-color: #a50044; /* Rojo oscuro del FC Barcelona */
+  padding: 10px 20px; /* Espacio interno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.navbar-list {
+  list-style-type: none; /* Eliminar los puntos de la lista */
+  padding: 0; /* Eliminar el espacio interno predeterminado */
+  margin: 0; /* Eliminar el margen exterior predeterminado */
+  text-align: center; /* Alineación centrada */
+}
+
+.navbar-list li {
+  display: inline-block; /* Mostrar elementos en línea */
+  margin-right: 20px; /* Espacio entre elementos */
+}
+
+.navbar-list li:last-child {
+  margin-right: 0; /* Eliminar el margen derecho del último elemento */
+}
+
+.navbar-list li a {
+  color: #fff; /* Color del texto blanco */
+  text-decoration: none; /* Eliminar subrayado del enlace */
+  font-weight: bold; /* Negrita */
+  transition: color 0.3s ease; /* Efecto de transición suave */
+}
+
+.navbar-list li a:hover {
+  color: #ffd700; /* Cambia el color a dorado al pasar el ratón */
+}

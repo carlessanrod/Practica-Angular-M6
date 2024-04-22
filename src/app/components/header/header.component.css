@@ -1,0 +1,30 @@
+.header {
+  background-color: #a50044; /* Rojo oscuro del FC Barcelona */
+  color: #fff; /* Color del texto blanco */
+  padding: 20px; /* Espacio interno */
+  text-align: center; /* Alineación centrada */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.header-title {
+  margin: 0; /* Eliminar el margen superior e inferior predeterminado */
+  font-size: 48px; /* Tamaño del título */
+  font-weight: 700; /* Negrita */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-transform: uppercase; /* Convertir texto a mayúsculas */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente */
+}
+
+.header-title:hover {
+  color: #ffd700; /* Cambia el color a dorado al pasar el ratón */
+  transition: color 0.3s ease; /* Efecto de transición suave */
+}
+
+.header-navbar {
+  margin-top: 20px; /* Espacio entre el título y la barra de navegación */
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}

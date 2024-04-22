@@ -1,0 +1,106 @@
+/* Estilos para el contenedor principal de jugadores */
+.player-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Estilo para el título */
+.title {
+  margin: 30px 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Estilos para cada jugador */
+.player-item {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.player-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilos para la imagen del jugador */
+.player-imagen {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.player-imagen img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los detalles del jugador */
+.player-item div {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.nombredejugador {
+  font-weight: bold;
+  color: #333;
+}
+
+.numerodejugador {
+  color: #007bff;
+}
+
+.nacionalidad {
+  color: #28a745;
+}
+
+.piernabuena {
+  color: #dc3545;
+}
+
+.jugadorlibre {
+  font-style: italic;
+  color: #f39c12;
+}
+
+/* Estilo para el mensaje de "No hay jugadores" */
+.no-players-message {
+  margin: 20px;
+  font-style: italic;
+  color: #888;
+  text-align: center;
+}
+
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+  margin: 30px;
+  text-align: center;
+}
+
+/* Estilos para el input de búsqueda */
+.search-input {
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  width: 60%;
+  transition: border-color 0.3s ease;
+}
+
+/* Estilos para el placeholder */
+.search-input::placeholder {
+  color: #999;
+}
+
+/* Estilos para cuando el input está enfocado */
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+}

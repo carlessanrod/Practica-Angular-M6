@@ -1,0 +1,22 @@
+<div class="search-container">
+    <input type="text" class="search-input" #searchInput (input)="search(searchInput.value)" placeholder="Buscar Jugadores">
+</div>
+
+<h2 class="title">Jugadores</h2>
+
+<div *ngIf="players.length > 0; else noPlayers" class="player-container">
+    <div *ngFor="let player of players" class="player-item">
+        <div *ngIf="player.imagen !== undefined && player.imagen.trim() !== ''" class="player-imagen">
+            <img [src]="player.imagen" alt="player imagen" class="imagen">
+        </div>
+        <div class="nombredejugador">{{ player.nombredejugador }}</div>
+        <div class="nacionalidad">{{ player.nacionalidad }}</div>
+        <div class="numerodejugador">{{ player.numerodejugador }}</div>
+        <div class="piernabuena">Pierna Buena: {{ player.piernabuena }}</div>
+        <div class="jugadorlibre" *ngIf="player.jugadorlibre">Jugador Libre!</div>
+    </div>
+</div>
+
+<ng-template #noPlayers>
+    <p class="no-players-message">No hay jugadores todavia.</p>
+</ng-template>
